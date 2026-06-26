@@ -128,7 +128,27 @@ section { padding: 7.5rem 4rem; position: relative; z-index: 5; }
     box-shadow: 0 18px 40px rgba(0,0,0,.18); }
 .about-img-badge-num { font-size: 2.6rem; font-weight: 300; line-height: 1; display: block; }
 .about-img-badge-text { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 0.4rem; font-family: 'Jost', sans-serif; font-weight: 400; }
+/* Mobile Fix */
+@media (max-width: 768px) {
 
+    .about-right{
+        overflow: visible;
+    }
+
+    .about-img-badge{
+        left: -18px;
+        bottom: 18px;
+        padding: 1rem 1.3rem;
+    }
+
+    .about-img-badge-num{
+        font-size: 2rem;
+    }
+
+    .about-img-badge-text{
+        font-size: 0.6rem;
+    }
+}
 /* ── SERVICES SECTION ── */
 #services { background: var(--bg-alt); }
 .services-header { margin-bottom: 4.5rem; }
