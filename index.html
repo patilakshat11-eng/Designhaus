@@ -112,11 +112,20 @@ section { padding: 7.5rem 4rem; position: relative; z-index: 5; }
 #about { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: center; background: var(--bg-main); }
 .about-desc { font-size: 1.02rem; line-height: 1.9; color: var(--text-muted); margin-top: 2rem; max-width: 500px; }
 .about-quote { margin-top: 2.8rem; padding-left: 1.8rem; border-left: 2px solid var(--brand-burgundy); font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-style: italic; color: var(--text-dark); line-height: 1.45; }
-.about-right { position: relative; }
+.about-right { position: relative;overflow: visible; /* Important */ }
 .about-img-frame { position: relative; aspect-ratio: 3/4; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.03); }
 .about-img-frame img { transition: transform 1s ease; }
 .about-img-frame:hover img { transform: scale(1.05); }
-.about-img-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--brand-burgundy); color: var(--bg-main); padding: 1.6rem 2.2rem; font-family: 'Cormorant Garamond', serif; z-index: 3; }
+.about-img-badge { position: absolute;
+    left: -55px;      /* Move outside the image */
+    bottom: 35px;     /* Keep it vertically aligned */
+    z-index: 20;
+
+    background: var(--brand-burgundy);
+    color: #fff;
+    padding: 1.6rem 2.3rem;
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.18); }
 .about-img-badge-num { font-size: 2.6rem; font-weight: 300; line-height: 1; display: block; }
 .about-img-badge-text { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 0.4rem; font-family: 'Jost', sans-serif; font-weight: 400; }
 
